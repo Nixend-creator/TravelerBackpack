@@ -60,7 +60,7 @@ public class BackpackManager {
         player.openInventory(gui);
 
         Location loc = player.getLocation();
-        player.getWorld().spawnParticle(org.bukkit.Particle.VILLAGER_HAPPY, loc, 20, 0.5, 0.5, 0.5);
+        player.getWorld().spawnParticle(org.bukkit.Particle.HAPPY_VILLAGER, loc, 20, 0.5, 0.5, 0.5);
     }
 
     public ItemStack getToolSlot(Player player, int index) {
