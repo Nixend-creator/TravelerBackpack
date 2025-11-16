@@ -1,1 +1,21 @@
+name: TravelerBackpack
+version: 1.0
+main: com.example.travelerbackpack.TravelerBackpackPlugin
+api-version: 1.21
 
+commands:
+  backpack:
+    description: Открыть свой рюкзак
+    usage: /backpack
+  backpackgive:
+    description: Выдать рюкзак игроку
+    usage: /backpackgive <player>
+    permission: travelerbackpack.give
+
+permissions:
+  travelerbackpack.use:
+    description: Разрешение использовать рюкзак
+    default: true
+  travelerbackpack.give:
+    description: Разрешение выдавать рюкзаки
+    default: op
