@@ -155,7 +155,8 @@ public class BackpackManager {
         if (file.exists()) {
             FileConfiguration cfg = YamlConfiguration.loadConfiguration(file);
             ItemStack[] items = ((List<ItemStack>) cfg.getList("items")).toArray(new ItemStack[0]);
-            List<ItemStack> toolList = cfg.getList("tools");
+            List<?> rawList = cfg.getList("tools");
+            List<ItemStack> toolList = (List<ItemStack>) (List<?>) rawList;
             if (toolList != null && toolList.size() == 4) {
                 ItemStack[] tools = toolList.toArray(new ItemStack[0]);
                 toolSlots.put(uuid, tools);
