@@ -61,7 +61,7 @@ public class BackpackGUI {
         gui.setItem(44, filterButton);
 
         // Спальный мешок
-        gui.setItem(45, createSleepingBag());
+        gui.setItem(44, createSleepingBag()); // ПРАВИЛЬНО
 
         return gui;
     }
