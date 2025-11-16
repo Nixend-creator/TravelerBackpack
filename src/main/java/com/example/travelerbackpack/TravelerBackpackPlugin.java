@@ -20,12 +20,14 @@ import java.util.List;
 
 public class TravelerBackpackPlugin extends JavaPlugin {
 
-    public static final NamespacedKey BACKPACK_IDENTIFIER = new NamespacedKey(this, "traveler_backpack");
+    public static NamespacedKey BACKPACK_IDENTIFIER; // <-- Теперь не static final
 
     private BackpackManager backpackManager;
 
     @Override
     public void onEnable() {
+        BACKPACK_IDENTIFIER = new NamespacedKey(this, "traveler_backpack"); // <-- Инициализация
+
         this.backpackManager = new BackpackManager(this);
 
         getCommand("backpack").setExecutor((sender, command, label, args) -> {
